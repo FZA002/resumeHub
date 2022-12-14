@@ -4,7 +4,7 @@ require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env') })
 
 const databaseAndCollection = {db: "CMSC335_DB", collection: "resumes"}
 const { MongoClient } = require('mongodb')
-const uri = process.env.MONGO_CONNECTION_STRING
+const uri = `mongodb+srv://falmond:umd2022@cluster0.mtrkcuo.mongodb.net/?retryWrites=true&w=majority`
 console.log(uri)
 const client = new MongoClient(uri)
 
