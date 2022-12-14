@@ -1,4 +1,5 @@
 "use strict";
+const path = require('path')
 const databaseAndCollection = {db: "CMSC335_DB", collection: "resumes"}
 const { MongoClient } = require('mongodb')
 const uri = process.env.MONGO_CONNECTION_STRING
