@@ -1,12 +1,11 @@
 "use strict";
 const path = require('path')
 require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env') })
-const userName = process.env.MONGO_DB_USERNAME
-const password = process.env.MONGO_DB_PASSWORD
+
 const databaseAndCollection = {db: "CMSC335_DB", collection: "resumes"}
-const { MongoClient, ServerApiVersion } = require('mongodb')
-const uri = `mongodb+srv://${userName}:${password}@cluster0.mtrkcuo.mongodb.net/?retryWrites=true&w=majority`
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 })
+const { MongoClient } = require('mongodb')
+const uri = process.env.MONGO_CONNECTION_STRING
+const client = new MongoClient(uri)
 
 const express = require("express")
 const app = express()
