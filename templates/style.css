@@ -1,0 +1,23 @@
+html {
+    font-size: 14px;
+    padding: 0%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#header {
+   margin-left: 30%;
+   margin-right: 30%;
+   width: 40%;
+   display: inline-block;
+   text-align: center;
+   background-color: rgb(211,211,211, 0.8);
+   border-style: solid; /* try solid, dashed, groove, ridge, inset, outset */ 
+   border-color: black;
+   border-width: .1rem;   
+}
+
+#resumeBody {
+    margin-left: 30%;
+    margin-right: 30%;
+}

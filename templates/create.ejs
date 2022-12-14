@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Create Resume</title>
+</head>
+
+<body>
+    <h1>Create Resume</h1>
+    <form action="/create" method="post" onsubmit="return confirm('Are you sure you want to submit your resume? \nYou will not be able to change your information once submitted.')">
+        <fieldset>
+            <strong>First Name: </strong><input type="text" name="firstName">
+            <br><br>
+            <strong>Last Name: </strong><input type="text" name="lastName">
+            <br><br>
+            <strong> Email Address: </strong><input type="text" name="email">
+            <br><br>
+            <strong>Education: </strong><input type="text" name="education">
+            <br><br>
+            <strong>GPA: </strong><input type="text" name="gpa">
+            <br><br>
+            <strong>Work Experience:</strong>
+            <br>
+            <textarea rows="5" cols="100" name="workExperience"></textarea>
+            <br><br>
+            <strong>Skills:</strong>
+            <br>
+            <textarea rows="5" cols="100" name="skills"></textarea>
+        </fieldset>
+        <br>
+        <input type="reset">
+        <input type="submit" value="Submit Resume">
+    </form>
+    <br><br>
+    <a href="/">HOME</a>
+</body>
+</html>
