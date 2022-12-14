@@ -1,7 +1,4 @@
 "use strict";
-const path = require('path')
-require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env') })
-
 const databaseAndCollection = {db: "CMSC335_DB", collection: "resumes"}
 const { MongoClient } = require('mongodb')
 const uri = process.env.MONGO_CONNECTION_STRING
@@ -70,19 +67,6 @@ app.post("/review", async (request, response) => {
 
     response.render("processReview", variables)
 })
-
-function downloadCatImage() {
-    let catImagesUrl = `https://api.thecatapi.com/v1/images/search`;
-    fetch(catImagesUrl)
-      .then(response => response.json())
-      .then(json => {
-        const imageUrl = json[0].url;
-        const img = document.querySelector("#downloadedImage");
-        img.src = imageUrl;
-        document.querySelector("#display").innerHTML = `Source: <a href="${imageUrl}">${imageUrl}</a>`;
-      });
-  }
-
 
 /* EXPRESS SERVER */
 const PORT = 3000
